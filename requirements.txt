@@ -1,6 +1,8 @@
-streamlit
+Cython
+numpy<2.0.0
+git+https://github.com/CPJKU/madmom.git
 BeatNet
 librosa
 soundfile
-numpy
 torch
+streamlit
