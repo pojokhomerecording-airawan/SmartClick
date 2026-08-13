@@ -1,10 +1,19 @@
-import os
-import tempfile
+import sys
+from unittest.mock import MagicMock
+
+# Trick untuk membypass dependency PyAudio di server cloud tanpa soundcard
+sys.modules['pyaudio'] = MagicMock()
+
+# Baru import BeatNet setelahnya
+from BeatNet.BeatNet import BeatNet
+import streamlit as st
 import librosa
 import numpy as np
 import soundfile as sf
-import streamlit as st
-from BeatNet.BeatNet import BeatNet
+import tempfile
+import os
+
+# ... sisa kode app.py Anda di bawah ...
 
 st.set_page_config(page_title="AI Smart Click Metronome", page_icon="🥁")
 st.title("🥁 Smart Click Metronome (Powered by BeatNet AI)")
