@@ -1,0 +1,6 @@
+streamlit
+BeatNet
+librosa
+soundfile
+numpy
+torch
